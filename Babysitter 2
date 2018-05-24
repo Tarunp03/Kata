@@ -1,0 +1,94 @@
+@using System.ComponentModel.DataAnnotations
+
+@model ShipApp.Models.RequestViewModel
+
+@{
+   ViewBag.Title = Model.viewTitle;
+}
+
+@section Scripts {
+   <script type="text/javascript">
+      var arrayBabys = [];
+      var arrayTimigs = [];
+
+      var urlRequestEdit = "@Url.Action("edit", "Time")";
+      var urlRequestCreateBabysitterFormAction = "@Url.Action("createBabysitterForm", "Request")";
+      var urlRequestCreateCreateInvoiceAction = "@Url.Action("createInvoice", "Request")";
+   </script>
+   @Scripts.Render("~/Scripts/request.js")
+   <link href="~/Content/view.css" rel="stylesheet" />
+}@* End of @section Scripts *@
+
+
+@Html.HiddenFor(model => model.Babysitterform.id)
+<div>
+   <div>
+      <h2>@Model.viewTitle</h2>
+      <button id="buttonEdit">Edit This Request</button>
+      <button id="buttonCreateBaby">Create Timigs</button>
+      <button id="buttonCreateInvoice">Create Invoice</button>
+   </div>
+</div>
+<hr>
+<div>
+   <div>
+      <h2>Baby Sitter Name:</h2>
+      <div class="row">
+         <div class="col-md-2">
+            <label>Name:</label>
+         </div>
+         <div class="col-md-3">
+            @Html.DisplayFor(model => model.Babysitter Name)
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-2">
+            <label>Phone:</label>
+         </div>
+         <div class="col-md-3">
+            @Html.DisplayFor(model => model.PhoneNumber)
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-2">
+            <label>Email:</label>
+         </div>
+         <div class="col-md-3">
+            @Html.DisplayFor(model => model.shipReq.requesterEmailAddress)
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-2">
+            <label>Cost Center:</label>
+         </div>
+         
+      </div>
+   </div>
+   <hr />
+   <div>
+      <h2>From:</h2>
+      <div class="row">
+         <div class="col-md-2">
+            <label>Mother Name :</label>
+         </div>
+         <div class="col-md-3">
+            <label>Father Name:</label>
+         </div>
+      
+         <div class="col-md-2">
+            <label>Phone:</label>
+         </div>
+         
+         <div class="col-md-2">
+            <label>  Location:</label>
+         </div>
+         
+
+      
+         
+   
+    
+        
+        
+
+              
